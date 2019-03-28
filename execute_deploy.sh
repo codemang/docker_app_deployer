@@ -2,6 +2,8 @@
 
 set -e
 
+cd $1
+
 echo "Downloading master..."
 git fetch origin
 git reset --hard origin/master
