@@ -14,5 +14,8 @@ docker-compose build
 echo "\nBundling gems"
 docker-compose run web bundle install
 
+echo "\nShutting down all services..."
+docker-compose down
+
 echo "\nStarting all services..."
 docker-compose up -d web
