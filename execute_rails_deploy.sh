@@ -7,6 +7,7 @@ cd $1
 git fetch origin
 git reset --hard origin/master
 
+docker-compose build
 docker-compose run --rm web bundle i
 docker-compose run --rm web rake db:migrate
 docker-compose restart
